@@ -100,6 +100,45 @@
       font-size: 1.1rem;
     }
 
+    /* ======== SEÇÃO DE RECURSOS ======== */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      gap: 30px;
+      padding: 100px 40px;
+      background: radial-gradient(circle at bottom, #001122, #000);
+    }
+
+    .feature-card {
+      flex: 1 1 300px;
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 15px rgba(0, 170, 255, 0.2);
+      padding: 30px;
+      transition: 0.4s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0, 170, 255, 0.4);
+    }
+
+    .feature-card h3 {
+      color: #00aaff;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      color: #ccc;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
     /* ======== RODAPÉ ======== */
     footer {
       text-align: center;
@@ -107,6 +146,17 @@
       color: #777;
       background: #000;
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -129,6 +179,30 @@
     <h1>Shiny Client</h1>
     <p>O Shiny Client é um client moderno e otimizado para Minecraft, feito para oferecer desempenho, estilo e praticidade. Explore o novo jeito de jogar!</p>
     <a class="download-btn" href="https://github.com/ShinyClient-Beta/Data/releases/tag/0.0.1-BETA" target="_blank">Baixar Agora</a>
+  </section>
+
+  <!-- SEÇÃO DE RECURSOS -->
+  <section class="features">
+    <div class="feature-card">
+      <h3>🛡️ Escudo de segurança</h3>
+      <p>Camada de reforço que corrige vulnerabilidades legadas do Minecraft e protege contra pacotes maliciosos.</p>
+      <p>As verificações de tempo de execução neutralizam explorações de falhas conhecidas e cadeias remotas de execução de código.</p>
+      <p>O monitor de integridade sinaliza os jars modificados antes que eles possam ser injetados no cliente.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>💻 Suporte multiplataforma</h3>
+      <p>Experiência unificada do inicializador no Windows, macOS e Linux com caminhos de renderização nativos.</p>
+      <p>Os pipelines Metal, DirectX e OpenGL são ajustados por sistema operacional para FPS consistente.</p>
+      <p>Atualizações automáticas fornecem compilações idênticas, não importa onde você faça login.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🎵 Integração Spotify</h3>
+      <p>Vincule o Spotify diretamente ao cliente para que as sessões transmitam o que você está ouvindo junto com sua jogabilidade.</p>
+      <p>Os controles nativos expõem o estado da faixa, do artista e da reprodução sem sair do HUD.</p>
+      <p>O Discord Rich Presence espelha o status da música automaticamente, sem plugins externos.</p>
+    </div>
   </section>
 
   <!-- RODAPÉ -->
