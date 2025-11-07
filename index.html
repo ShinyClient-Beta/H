@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <img src="logo.png" alt="Shiny Client Logo">
   <title>Shiny Client</title>
-  <!-- Lucide Icons -->
+  <!-- Ícones Lucide -->
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     /* ======== ESTILO GERAL ======== */
@@ -80,7 +81,7 @@
       transform: scale(1.05);
     }
 
-    /* ======== CONTEÚDO PRINCIPAL ======== */
+    /* ======== HERO ======== */
     .hero {
       display: flex;
       flex-direction: column;
@@ -108,7 +109,7 @@
       font-size: 1.1rem;
     }
 
-    /* ======== SEÇÃO DE RECURSOS ======== */
+    /* ======== FEATURES ======== */
     .features {
       display: flex;
       flex-wrap: wrap;
@@ -135,13 +136,6 @@
       box-shadow: 0 0 25px rgba(0, 170, 255, 0.4);
     }
 
-    .feature-icon {
-      width: 36px;
-      height: 36px;
-      color: #00aaff;
-      margin-bottom: 10px;
-    }
-
     .feature-card h3 {
       color: #00aaff;
       font-size: 1.5rem;
@@ -155,6 +149,51 @@
       color: #ccc;
       font-size: 1rem;
       line-height: 1.6;
+    }
+
+    /* ======== FAQ ======== */
+    .faq {
+      padding: 80px 40px;
+      text-align: center;
+      background: linear-gradient(to top, #000, #001122);
+    }
+
+    .faq h2 {
+      color: #00aaff;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .faq-item {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 15px;
+      padding: 20px 25px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 15px rgba(0, 170, 255, 0.2);
+      text-align: left;
+      transition: 0.3s;
+    }
+
+    .faq-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
+    }
+
+    .faq-item h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #00aaff;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      color: #ccc;
+      margin: 0;
     }
 
     /* ======== RODAPÉ ======== */
@@ -186,6 +225,7 @@
     <ul>
       <li><a href="#"><i data-lucide="home"></i>Home</a></li>
       <li><a href="#"><i data-lucide="users"></i>Equipe</a></li>
+      <li><a href="https://namemc.com" target="_blank"><i data-lucide="user"></i>Skins</a></li>
       <li><a href="#"><i data-lucide="message-circle"></i>Discord</a></li>
       <li><a href="#"><i data-lucide="info"></i>Sobre</a></li>
     </ul>
@@ -194,7 +234,7 @@
     </a>
   </nav>
 
-  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- HERO -->
   <section class="hero">
     <h1>Shiny Client</h1>
     <p>O Shiny Client é um client moderno e otimizado para Minecraft, feito para oferecer desempenho, estilo e praticidade. Explore o novo jeito de jogar!</p>
@@ -203,27 +243,52 @@
     </a>
   </section>
 
-  <!-- SEÇÃO DE RECURSOS -->
+  <!-- FEATURES -->
   <section class="features">
     <div class="feature-card">
-      <h3><i data-lucide="shield-check" class="feature-icon"></i>Escudo de segurança</h3>
+      <h3><i data-lucide="shield-check"></i>Escudo de segurança</h3>
       <p>Camada de reforço que corrige vulnerabilidades legadas do Minecraft e protege contra pacotes maliciosos.</p>
       <p>As verificações de tempo de execução neutralizam explorações de falhas conhecidas e cadeias remotas de execução de código.</p>
       <p>O monitor de integridade sinaliza os jars modificados antes que eles possam ser injetados no cliente.</p>
     </div>
 
     <div class="feature-card">
-      <h3><i data-lucide="monitor-smartphone" class="feature-icon"></i>Suporte multiplataforma</h3>
+      <h3><i data-lucide="monitor-smartphone"></i>Suporte multiplataforma</h3>
       <p>Experiência unificada do inicializador no Windows, macOS e Linux com caminhos de renderização nativos.</p>
       <p>Os pipelines Metal, DirectX e OpenGL são ajustados por sistema operacional para FPS consistente.</p>
       <p>Atualizações automáticas fornecem compilações idênticas, não importa onde você faça login.</p>
     </div>
 
     <div class="feature-card">
-      <h3><i data-lucide="music" class="feature-icon"></i>Integração Spotify</h3>
+      <h3><i data-lucide="music"></i>Integração Spotify</h3>
       <p>Vincule o Spotify diretamente ao cliente para que as sessões transmitam o que você está ouvindo junto com sua jogabilidade.</p>
       <p>Os controles nativos expõem o estado da faixa, do artista e da reprodução sem sair do HUD.</p>
       <p>O Discord Rich Presence espelha o status da música automaticamente, sem plugins externos.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2><i data-lucide="help-circle"></i> FAQ - Perguntas Frequentes</h2>
+
+    <div class="faq-item">
+      <h3><i data-lucide="package"></i>Qual é a versão atual do Shiny Client?</h3>
+      <p>A versão atual do Shiny Client é <strong>0.0.1 BETA</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><i data-lucide="gamepad-2"></i>Qual é a versão do Minecraft compatível?</h3>
+      <p>O Shiny Client atualmente é compatível com a versão <strong>1.8.9</strong> do Minecraft.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><i data-lucide="lock"></i>O Shiny Client é seguro?</h3>
+      <p>Sim! Ele é construído com camadas de segurança e verificação de integridade que impedem modificações maliciosas e protegem contra exploits conhecidos.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><i data-lucide="cpu"></i>O Shiny Client funciona em qualquer sistema operacional?</h3>
+      <p>Sim! Ele possui suporte nativo para <strong>Windows</strong>, <strong>macOS</strong> e <strong>Linux</strong>.</p>
     </div>
   </section>
 
@@ -233,7 +298,7 @@
   </footer>
 
   <script>
-    lucide.createIcons(); // Inicializa os ícones Lucide
+    lucide.createIcons();
   </script>
 
 </body>
