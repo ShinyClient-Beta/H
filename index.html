@@ -10,8 +10,9 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top, #0d0d1a, #06060f);
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
       color: white;
+      min-height: 100vh;
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
@@ -29,14 +30,15 @@
       width: 85%;
       border-radius: 50px;
       background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(15px);
+      backdrop-filter: blur(12px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       z-index: 10;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
 
     .navbar img {
       height: 45px;
+      filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));
     }
 
     .navbar ul {
@@ -61,44 +63,22 @@
       color: #7aaaff;
     }
 
-    /* ======== BOTÕES RGB ======== */
-    .rgb-btn {
-      position: relative;
-      background: rgba(255, 255, 255, 0.05);
+    .download-btn {
+      background: linear-gradient(90deg, #7a5cff, #00e0ff);
       color: white;
-      padding: 12px 30px;
-      border-radius: 30px;
+      padding: 10px 25px;
+      border-radius: 25px;
       text-decoration: none;
       font-weight: bold;
-      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 8px;
       transition: 0.3s;
-      z-index: 1;
     }
 
-    .rgb-btn::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      padding: 2px;
-      border-radius: 30px;
-      background: linear-gradient(45deg, red, orange, yellow, lime, cyan, blue, magenta, red);
-      background-size: 300% 300%;
-      animation: rgb-border 3s linear infinite;
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      z-index: -1;
-    }
-
-    .rgb-btn:hover {
+    .download-btn:hover {
       transform: scale(1.05);
-      filter: brightness(1.3);
-    }
-
-    @keyframes rgb-border {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      filter: brightness(1.2);
     }
 
     /* ======== HERO ======== */
@@ -109,7 +89,8 @@
       justify-content: center;
       text-align: center;
       min-height: 100vh;
-      background: linear-gradient(135deg, #1a1a40, #060614);
+      background: radial-gradient(circle at top, #2f2fa2, #000000 70%);
+      color: #fff;
       padding: 0 20px;
     }
 
@@ -119,70 +100,130 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 10px;
+      letter-spacing: 1px;
     }
 
     .hero p {
       max-width: 600px;
-      color: #ccc;
+      color: #cccccc;
       font-size: 1.2rem;
     }
 
-    .hero .rgb-btn {
+    .hero .download-btn {
       margin-top: 30px;
       font-size: 1.1rem;
     }
 
-    /* ======== SHOWCASE ======== */
-    .showcase {
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(180deg, #0b0b1a, #000);
+    /* ======== FEATURES ======== */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 100px 40px;
+      background: linear-gradient(180deg, #0f3460, #000);
     }
 
-    .showcase h2 {
-      font-size: 2.3rem;
+    .feature-card {
+      flex: 1 1 300px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 15px rgba(0, 170, 255, 0.1);
+      padding: 30px;
+      transition: 0.4s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0, 170, 255, 0.4);
+    }
+
+    .feature-card h3 {
       background: linear-gradient(90deg, #7a5cff, #00e0ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 20px;
-    }
-
-    .carousel {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 40px;
+      align-items: center;
+      gap: 10px;
     }
 
-    .carousel img {
-      width: 450px;
-      border-radius: 20px;
-      border: 2px solid rgba(255,255,255,0.1);
-      box-shadow: 0 0 25px rgba(0, 170, 255, 0.2);
+    .feature-card p {
+      color: #bfbfbf;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ======== FAQ ======== */
+    .faq {
+      padding: 80px 40px;
+      text-align: center;
+      background: linear-gradient(to top, #000, #0f3460);
+    }
+
+    .faq h2 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      background: linear-gradient(90deg, #7a5cff, #00e0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .faq-item {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 20px 25px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(0, 170, 255, 0.1);
+      text-align: left;
       transition: 0.3s;
     }
 
-    .carousel img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 40px rgba(0, 170, 255, 0.4);
+    .faq-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 170, 255, 0.4);
+    }
+
+    .faq-item h3 {
+      color: #7aaaff;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .faq-item p {
+      color: #ccc;
+      margin: 0;
     }
 
     /* ======== RODAPÉ ======== */
     footer {
       text-align: center;
-      padding: 40px 0;
-      color: #777;
+      padding: 30px 0;
+      color: #888;
       background: #000;
       font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
-      .carousel img {
-        width: 90%;
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
       }
       .hero h1 {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
       }
     }
   </style>
@@ -193,32 +234,69 @@
   <nav class="navbar">
     <img src="logo.png" alt="Shiny Client Logo">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Recursos</a></li>
-      <li><a href="#">Showcase</a></li>
-      <li><a href="#">FAQ</a></li>
+      <li><a href="#"><i data-lucide="home"></i>Home</a></li>
+      <li><a href="#"><i data-lucide="users"></i>Equipe</a></li>
+      <li><a href="https://namemc.com" target="_blank"><i data-lucide="user"></i>Skins</a></li>
+      <li><a href="#"><i data-lucide="message-circle"></i>Discord</a></li>
+      <li><a href="#"><i data-lucide="info"></i>Sobre</a></li>
     </ul>
-    <a class="rgb-btn" href="#" target="_blank">Download</a>
+    <a class="download-btn" href="https://github.com/ShinyClient-Beta/Data/releases/tag/0.0.1-BETA" target="_blank">
+      <i data-lucide="download"></i>Download
+    </a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <h1>Shiny Client</h1>
-    <p>Um client moderno e estilizado para Minecraft, com desempenho otimizado e interface premium. Experimente o novo padrão de qualidade.</p>
-    <a class="rgb-btn" href="#" target="_blank">Baixar Agora</a>
+    <p>Um client moderno e otimizado para Minecraft, feito para oferecer desempenho, estilo e praticidade. Descubra o novo jeito de jogar.</p>
+    <a class="download-btn" href="https://github.com/ShinyClient-Beta/Data/releases/tag/0.0.1-BETA" target="_blank">
+      <i data-lucide="download"></i>Baixar Agora
+    </a>
   </section>
 
-  <!-- SHOWCASE -->
-  <section class="showcase" id="showcase">
-    <h2>Visual Showcase</h2>
-    <p>Conheça o design refinado e moderno do Shiny Client.</p>
-    <div class="carousel">
-      <img src="image1.png" alt="Imagem 1 do Shiny Client">
-      <img src="image2.png" alt="Imagem 2 do Shiny Client">
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature-card">
+      <h3><i data-lucide="shield-check"></i>Segurança Reforçada</h3>
+      <p>Camadas de proteção avançadas contra vulnerabilidades e pacotes maliciosos, mantendo seu jogo estável e seguro.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3><i data-lucide="monitor-smartphone"></i>Multiplataforma</h3>
+      <p>Funciona em Windows, macOS e Linux com pipelines otimizados para cada sistema, garantindo máximo desempenho.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3><i data-lucide="music"></i>Integração Spotify</h3>
+      <p>Conecte sua conta do Spotify e compartilhe o que está ouvindo durante o jogo, com integração total ao Discord Rich Presence.</p>
     </div>
   </section>
 
-  <!-- RODAPÉ -->
+  <!-- FAQ -->
+  <section class="faq">
+    <h2><i data-lucide="help-circle"></i> Perguntas Frequentes</h2>
+
+    <div class="faq-item">
+      <h3><i data-lucide="package"></i>Qual é a versão atual?</h3>
+      <p>A versão atual é <strong>0.0.1 BETA</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><i data-lucide="gamepad-2"></i>Compatibilidade com Minecraft?</h3>
+      <p>Compatível com a versão <strong>1.8.9</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><i data-lucide="lock"></i>É seguro?</h3>
+      <p>Sim! Com verificações de integridade e proteção contra exploits conhecidos.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><i data-lucide="cpu"></i>Funciona em qualquer SO?</h3>
+      <p>Sim! Compatível com Windows, macOS e Linux.</p>
+    </div>
+  </section>
+
   <footer>
     © 2025 Shiny Client — Feito com 💙 para a comunidade Minecraft
   </footer>
@@ -226,6 +304,5 @@
   <script>
     lucide.createIcons();
   </script>
-
 </body>
 </html>
