@@ -1,0 +1,164 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #000000, #121212);
+    background-attachment: fixed;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #b3b3b3;
+}
+
+.navbar .btn {
+    background: white;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.navbar .btn:hover {
+    background: #ddd;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background: url('https://cdn.wallpapersafari.com/43/2/J8iS4C.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero-content {
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-hero {
+    margin-top: 1rem;
+    background: white;
+    color: black;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-hero:hover {
+    background: #ccc;
+}
+
+/* Seções */
+section {
+    padding: 6rem 3rem;
+    text-align: center;
+}
+
+#recursos .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 280px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.faq-item {
+    margin: 1.5rem auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+#contato .btn-email {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+#download .btn-download {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: 0.3s;
+}
+
+#download .btn-download:hover {
+    background: #ccc;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
